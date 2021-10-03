@@ -102,11 +102,12 @@ $ python3 scripts/update.py -D="./dictionaries/dictionary-1.16.2.json" -S="path/
 - the `-S` flag will set the path of the stats folder. It's usually found at `.minecraft/saves/<world>/stats`, or
 `<server>/world/stats`. It should contain plenty of JSON files.
 
-There are 4 __optional__ tags. If you have a custom scoreboard made for dig's, you can set their name and they will get updated:
+There are 5 __optional__ tags. If you have a custom scoreboard made for digs, you can set their name and they will get updated:
 - `--dig="<name>"` sets the name of the general dig scoreboard (counts all blocks mined)
 - `--picks="<name>"` sets the name of all type pick uses (netherite, diamond, iron...)
 - `--shovels="<name>"` sets the name of all type shovel uses 
 - `--axes="<name>"` sets the name of all type axe uses
+- `--hoes="<name>"` sets the name of all type hoe uses
 
 The program will generate a datapack at `datapacks/every-scoreboard-<version>`. Make sure you have a backup of your
 world *just in case* something goes wrong. Drag it to your world's datapacks folder,

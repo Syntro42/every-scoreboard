@@ -31,7 +31,9 @@ parser.add_argument("-D", "--dictionary", help="set the path from where the prog
 parser.add_argument("-d", "--dig", required=False, help="(optional) set the name of the total dig objective")
 parser.add_argument("-p", "--picks", required=False, help="(optional) set the name of the total pick uses objective")
 parser.add_argument("-s", "--shovels", required=False, help="(optional) set the name of the total shovel uses objective")
-parser.add_argument("-a", "--axes", required=False, help="(optional) set the name of the axe uses objective")
+parser.add_argument("-a", "--axes", required=False, help="(optional) set the name of the total axe uses objective")
+parser.add_argument("--hoes", required=False, help="(optional) set the name of the total hoe uses objective") 
+# The flag -h is conflicting, so that can't be used
 args = parser.parse_args()
 
 
@@ -136,6 +138,7 @@ def stats_to_commands(stats, prefix, dictionary):
 	picks = 0
 	shovels = 0
 	axes = 0
+	hoes = 0
 	for i in stats:
 		try:
 			stat = i[10:]
@@ -155,13 +158,15 @@ def stats_to_commands(stats, prefix, dictionary):
 					shovels += score
 				if "_axe" in stat:
 					axes += score
-			
+				if "hoe" in stat:
+					hoes += score
+
 			if prefix == "c-":
 				update_block_tag_stats(block_tags, block_tag_stats, stat, score)
 
 			if prefix == "z-":
 				block_tag = stat.split("_", 1)[-1]
-				
+
 				if block_tag in block_tags:
 					continue
 
@@ -178,6 +183,8 @@ def stats_to_commands(stats, prefix, dictionary):
 		commands.append("scoreboard players set %s " + args.shovels + " " + str(shovels))
 	if prefix == "u-" and args.axes != None:
 		commands.append("scoreboard players set %s " + args.axes + " " + str(axes))
+	if prefix == "u-" and args.hoes != None:
+		commands.append("scoreboard players set %s " + args.hoes + " " + str(hoes))
 
 	for tag in block_tag_stats:
 		if prefix == "m-":
