@@ -14,7 +14,7 @@ If you don't find what you need, read the following section; you can skip it oth
 
 First of all, clone the repository: 
 ```shell script
-$ git clone https://github.com/samipourquoi/every-scoreboard.git
+$ git clone https://github.com/Syntro42/every-scoreboard.git
 $ cd every-scoreboard
 ```
 
