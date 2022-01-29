@@ -1,25 +1,25 @@
 # Every Scoreboard
 
-A tool to generate all the scoreboard objectives available in Minecraft. 
+A tool to generate all the scoreboard objectives available in Minecraft.
 All of them, for ~~any~~ most versions.
 
 It works by generating a datapack which will create the scoreboards for you.
 
 # How to use
 
-You can find 'pre-made' datapacks over [here](https://github.com/samipourquoi/every-scoreboard/tags).
+You can find 'pre-made' datapacks over [here](https://github.com/Syntro42/every-scoreboard/tags).
 If you don't find what you need, read the following section; you can skip it otherwise.
 
 ## 'Compiling'
 
-First of all, clone the repository: 
+First of all, clone the repository:
 ```shell script
 $ git clone https://github.com/Syntro42/every-scoreboard.git
 $ cd every-scoreboard
 ```
 
-Install the dependencies with this command; 
-make sure you have [pip](https://pip.pypa.io/en/stable/installing/) installed. 
+Install the dependencies with this command;
+make sure you have [pip](https://pip.pypa.io/en/stable/installing/) installed.
 ```shell script
 $ pip install -r requirements.txt
 ```
@@ -57,11 +57,11 @@ And here you're all set! If you wish to get rid of all of these objectives, run:
 /function every-scoreboard:delete
 ```
 
-See the naming convention over in the next section. 
+See the naming convention over in the next section.
 
 Note that the scoreboard names won't change between versions of the game.
 That means you can have your world in 1.15.2 with that datapack, then updates your world to 1.16.2, run the datapack
-for that version again, and you will keep your scoreboards from 1.15.2, with the new ones. 
+for that version again, and you will keep your scoreboards from 1.15.2, with the new ones.
 
 ## Naming convention
 
@@ -79,7 +79,7 @@ The scoreboards are name accordingly:
 ### ⚠️ Important note ⚠️
 
 Scoreboards name can't be longer than 16 characters! To solve that issue, the program truncates the names which are too
-long, and replace their end with a series of number. 
+long, and replace their end with a series of number.
 
 If you wish to create your own tool solving that issue, you can find
 a JSON of key-value's (fullname to truncated name) in the generated `dictionaries/dictionary-<version>.json` file.
@@ -105,7 +105,7 @@ $ python3 scripts/update.py -D="./dictionaries/dictionary-1.16.2.json" -S="path/
 There are 5 __optional__ tags. If you have a custom scoreboard made for digs, you can set their name and they will get updated:
 - `--dig="<name>"` sets the name of the general dig scoreboard (counts all blocks mined)
 - `--picks="<name>"` sets the name of all type pick uses (netherite, diamond, iron...)
-- `--shovels="<name>"` sets the name of all type shovel uses 
+- `--shovels="<name>"` sets the name of all type shovel uses
 - `--axes="<name>"` sets the name of all type axe uses
 - `--hoes="<name>"` sets the name of all type hoe uses
 
@@ -118,6 +118,8 @@ and enter these commands:
 ```
 
 # Credits
-Contact me on Discord `samipourquoi#9267` or via the EndTech discord: https://discord.gg/t7UwaDc.
+The original creator is [`samipourquoi`](https://github.com/samipourquoi) \
+I am now the maintainer of this project. You can contact me on Discord `Syntro#9454` \
+or via the EndTech discord: https://discord.gg/m6zdS2Pm2J
 
 Feel free to contact me if you need any help 😀
