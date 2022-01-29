@@ -116,7 +116,7 @@ and enter these commands:
 
 # Credits
 The original creator is [`samipourquoi`](https://github.com/samipourquoi) \
-I am now the maintainer of this project. If you need any help, you can contact me on Discord `Syntro#9454` \
+I am now the maintainer of this project. You can contact me on Discord `Syntro#9454` \
 or via the EndTech discord: https://discord.gg/m6zdS2Pm2J
 
 Feel free to contact me if you need any help 😀
